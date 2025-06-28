@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: personalized-edu-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    healthCheckPath: /
+    plan: free # or 'starter', 'standard' etc.
+    region: oregon # Match your chosen region (e.g., 'oregon', 'frankfurt', 'singapore')
+
+  - type: web
+    name: personalized-edu-frontend
+    env: static # Frontend is a static site after build
+    rootDir: frontend
+    buildCommand: npm run build
+    outputDir: dist # Or 'build' if it's a create-react-app
+    # Render will automatically serve static files from outputDir
+    plan: free # or 'starter', 'standard' etc.
+    region: oregon # Match your chosen region

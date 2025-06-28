@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "name": "personalized-education-platform-frontend",
+      "root": "frontend",
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist",
+      "framework": "vite"
+    }
+  ]
+}

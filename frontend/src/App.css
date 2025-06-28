@@ -1,0 +1,307 @@
+/* frontend/src/App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: #333;
+  font-size: 2em;
+}
+
+.score-board {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #555;
+  margin-top: 10px;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.question-text {
+  font-size: 1.3em;
+  margin: 0 0 20px 0;
+  color: #222;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.option-label:hover {
+  background-color: #eef;
+}
+
+.option-label input[type="radio"] {
+  margin-right: 15px;
+  accent-color: #007bff;
+}
+
+.submit-button, .restart-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-button:hover, .restart-button:hover {
+  background-color: #0056b3;
+}
+
+.feedback-section {
+  min-height: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.feedback {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.correct {
+  color: #28a745;
+}
+
+.incorrect {
+  color: #dc3545;
+}
+
+.quiz-end-screen {
+  padding: 30px;
+  background-color: #f0f8ff;
+  border: 2px dashed #b3d9ff;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.quiz-end-screen h2 {
+  color: #007bff;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.final-score {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+}
+
+.message {
+  font-size: 1.1em;
+  color: #666;
+}
+/* ... (existing CSS code) ... */
+
+.message {
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* Add the new CSS rule here */
+.option-text {
+  margin-left: 10px; /* Gives a little space between the radio button and the text */
+  color: #222; /* Ensures the text is dark */
+}
+/* frontend/src/App.css */
+
+/* ... (all existing CSS above this line) ... */
+
+/* New CSS for Dashboard and Navigation */
+
+.navigation-buttons {
+  margin-top: 15px;
+}
+
+.nav-button {
+  background-color: #6c757d; /* Grey button for navigation */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 5px;
+}
+
+.nav-button:hover {
+  background-color: #5a6268;
+}
+
+.dashboard-container {
+  background-color: #f0f8ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dashboard-container h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.dashboard-total-score {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.question-history {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  max-height: 400px; /* Limit height to enable scrolling for many questions */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Space for scrollbar */
+}
+
+.history-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.history-item.correct-answer {
+  border-left: 5px solid #28a745; /* Green border for correct */
+}
+
+.history-item.incorrect-answer {
+  border-left: 5px solid #dc3545; /* Red border for incorrect */
+}
+
+.history-question {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.history-your-answer, .history-correct-answer, .history-status {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.history-status {
+  font-style: italic;
+  font-size: 0.85em;
+  color: #777;
+}
+
+.dashboard-restart-button {
+  margin-top: 30px;
+}
+
+/* Specific styling for the "View Full Results" button at quiz end */
+.view-dashboard-button {
+  background-color: #28a745; /* A distinct color for this button */
+  margin-left: 10px; /* Space from restart button */
+}
+.view-dashboard-button:hover {
+  background-color: #218838;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 1.8em;
+  }
+
+  .nav-button {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+
+  .question-card {
+    padding: 15px;
+  }
+
+  .question-text {
+    font-size: 1.1em;
+  }
+
+  .option-label {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .submit-button, .restart-button, .dashboard-restart-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .dashboard-total-score {
+    font-size: 1.3em;
+  }
+
+  .history-item {
+    padding: 10px;
+  }
+}
